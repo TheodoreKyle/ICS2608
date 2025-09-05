@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form and Table - Theodore Kyle Choa </title>
+    <style>
+        td {
+            border: 1px blue solid;
+        }
+        th {
+            border: 1px blue solid;
+        }
+    </style>
+</head>
+
+<body> 
+    <h1 style = "font-family: Geneva, sans-serif; text-align: center;"> Registration Form </h1>
+    <form name="Registration Form" method="post">
+        <fieldset style="border: none;">
+            <label for="fname" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> First Name: </b></label>
+            <br>
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name" required 
+            size="30" style="font-size: 18px; padding: 7px;">  
+            <br><br>
+
+            <label for="lname" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Last Name: </b></label>
+            <br> 
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" 
+            required size="30" style="font-size: 18px; padding: 7px;">
+            <br><br>
+
+            <label for="email" style="font-size: 24px; font-family: Helvetica, sans-serif;" ><b> Email: </b></label>
+            <br>
+            <input type="email" name="email" id="email" 
+            required placeholder="Enter your email" size="30" style="font-size: 18px; padding: 7px;">
+            <br><br>
+
+            <label for="password" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Password: </b></label>
+            <br>
+            <input type="password" name="password" id="password" 
+            required placeholder="Enter your password" size="30" style="font-size: 18px; padding: 7px;">
+            <br><br>
+
+            <label for="number" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Phone Number:</b></label>
+            <br>
+            <input type="number" id="number" placeholder="+639123456789"
+            style="font-size: 18px; padding: 6px;">
+            <br><br>
+
+            <label for="gender" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Gender: </b></label>
+            <br>
+            <input type="radio" id="male" name="gender" required > 
+            <label for="male" style="font-size: 18px; font-family: Helvetica, sans-serif;"> Male </label>
+            <br>
+            <input type="radio" id="female" name="gender" required> 
+            <label for="female" style="font-size: 18px; font-family: Helvetica, sans-serif;"> Female </label>
+            <br><br>
+
+            <label for="picture" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Picture: </b></label>
+            <br>
+            <input type="file">
+            <br><br>
+
+            <label for="section" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Region/Province </b></label>
+            <br>
+            <select name="Section" id="section" required style="font-size: 16px; width: 100px">
+                <option value=""> </option>                
+                    <option value="NCR"> NCR </option>
+                    <option value="CAR"> CAR </option>
+                    <option value="Region 1"> Region 1 </option>                
+                    <option value="Region 2"> Region 2 </option>
+                    <option value="Region 3">Region 3</option>
+                    <option value="Region 4A">Region 4A</option>
+                    <option value="Region 4B">Region 4B</option>
+                    <option value="Region 5">Region 5</option>
+                    <option value="Region 6"> Region 6 </option>
+                    <option value="Region 7"> Region 7 </option>
+                    <option value="Region 8"> Region 8 </option>
+                    <option value="Region 9"> Region 9 </option>
+                    <option value="Region 10">Region 10</option>
+                    <option value="Region 11">Region 11</option>
+                    <option value="Region 12">Region 12</option>
+                    <option value="Region 13">Region 13</option>
+            </select>
+            <br><br>
+
+            <label for="bday" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b>Birthdate: </b></label>
+            <br>
+            <input type="date" name="bday" id="bday" required style="font-size: 16px; font-family: Helvetica, sans-serif;">
+            <br><br> 
+
+            <label for="hobbies" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b>Hobbies: </b></label>
+            <br>
+            <input type="checkbox" name="Sports" id="Sports">
+            <label for="Sports" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Sports </label> <br>
+            <input type="checkbox" name="Cooking" id="Cooking">
+            <label for="Cooking" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Cooking </label> <br>
+            <input type="checkbox" name="Reading" id="Reading">
+            <label for="Reading" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Reading </label> <br>
+            <input type="checkbox" name="Video Games" id="Video Games">
+            <label for="Video Games" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Video Games </label> <br>
+            <input type="checkbox" name="Photography" id="Photography">
+            <label for="Photography" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Photography </label> <br>
+            <input type="checkbox" name="Traveling" id="Traveling">
+            <label for="Traveling" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Traveling </label> <br>
+            <input type="checkbox" name="Other Hobby" id="Other Hobby">
+            <label for="OtherHobby" style="font-size: 22px; font-family: Helvetica, sans-serif;"> Others: </label>
+            <input type="text" name="Other Text"  style="font-size: 16px;"> <br>
+            <br>
+
+            <label for="bio" style="font-size: 24px; font-family: Helvetica, sans-serif;"><b> Life Motto:</b></label>
+            <br>
+            <textarea name="bio" id="bio" placeholder="My motto in life is ..." cols=55 
+            style="padding: 9px; font-family: Arial, sans-serif"></textarea>
+            <br><br>
+
+           <input type="reset" value="Clear" 
+           style="background-color:#ee3c28; font-size:16px; font-family:Arial, sans-serif; padding: 10px 20px; border:none; cursor: pointer;">
+
+            <input type="submit" value="Submit" 
+            style="background-color:#14d263; font-size:16px; font-family:Arial, sans-serif; padding: 10px 20px; border:none; cursor: pointer;">
+
+        </fieldset>
+    </form>
+    <br>
+    <table width="20" cellspacing="0" cellpadding="9" style="border: 1px blue solid; font-family: Arial, sans-serif; text-align:center;">
+        <caption style = "font-size: 28px; font-family: Geneva, sans-serif;"><b> Registered Users </b></caption>
+        <thead style="font-size: 18px">
+            <tr>
+                <td colspan="2" style="text-align: center;"> Name </td>
+                <td rowspan="2"> Email </td>
+                <td rowspan="2"> Phone Number </td>
+                <td rowspan="2"> Gender </td>
+                <td rowspan="2"> Profile Picture </td>
+                <td rowspan="2"> Region/Province </td>
+                <td rowspan="2"> Birthdate </td>
+                <td rowspan="2"> Hobbies </td>
+            </tr>
+            <tr>
+                <td> First </td>
+                <td> Last </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Theodore Kyle </td>
+                <td> Choa </td>
+                <td> theodorekyle.choa.cics@ust.edu.ph </td>
+                <td> 09184675486 </td>
+                <td> Male </td>
+                <td><img src="https://media1.tenor.com/m/hgy5Xk1NE3wAAAAd/michele-michelle.gif" alt="" width="100"></td>
+                <td> NCR </td>
+                <td> 03/15/2006 </td>
+                <td> Video Games, Watching Anime</td>
+            </tr>
+            <tr>
+                <td> Maria Angela </td>
+                <td> Santos </td>
+                <td> maria.santos@gmail.com </td>
+                <td> 09171234567 </td>
+                <td> Female </td>
+                <td><img src="https://play-lh.googleusercontent.com/jR1TCYdPniVJBlKbdpA0KICptu2riZf3F1E78ulcs4fK8TTtW2jxLi-3HVwNmko65ks" alt="" width="100"></td>
+                <td> Region 4A </td>
+                <td> 08/22/2005 </td>
+                <td> Cooking, Reading </td>
+            </tr>
+
+            <tr>
+                <td> John Michael </td>
+                <td> Dela Cruz </td>
+                <td> john.delacruz@yahoo.com </td>
+                <td> 09281234567 </td>
+                <td> Male </td>
+                <td><img src="https://media.tenor.com/ORC7v2tS2IYAAAAe/gaming-genshin-impact.png" alt="" width="100"></td>
+                <td> Region 3 </td>
+                <td> 01/10/2004 </td>
+                <td rowspan="2"> Sports </td>
+            </tr>
+
+            <tr>
+                <td> Patricia Rose </td>
+                <td> Mendoza </td>
+                <td> patricia.mendoza@ust.edu.ph </td>
+                <td> 09051234567 </td>
+                <td> Female </td>
+                <td><img src="https://stickershop.line-scdn.net/stickershop/v1/product/26476583/LINEStorePC/main.png?v=1" alt="" width="100"></td>
+                <td> CAR </td>
+                <td> 11/05/2006 </td> 
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="9">Presented by: Theodore Kyle Choa &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 2ITB</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>
