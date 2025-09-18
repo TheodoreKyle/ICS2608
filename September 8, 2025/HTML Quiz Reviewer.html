@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1 Reviewer</title>
+</head>
+<body>
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>
+    <p>This is a paragraph</p>
+    <a href="https://www.google.com">This is a link</a>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+    <ul>
+        <li>This is an unordered list item</li>
+        <li>This is another unordered list item</li>
+        <li>This is yet another unordered list item</li>
+    </ul>
+    <ol>
+        <li>This is an ordered list item</li>
+        <li>This is another ordered list item</li>
+        <li>This is yet another ordered list item</li>
+    </ol>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+    </table>
+    <h2>Semantic HTML Tags</h2>
+    <p>Semantic tags clearly describe their meaning in a human- and machine-readable way. They help structure your HTML and improve accessibility and SEO.</p>
+    <ul>
+        <li><strong>&lt;header&gt;</strong>: Represents introductory content or a set of navigational links.</li>
+        <li><strong>&lt;nav&gt;</strong>: Defines navigation links.</li>
+        <li><strong>&lt;main&gt;</strong>: Specifies the main content of the document.</li>
+        <li><strong>&lt;section&gt;</strong>: Represents a standalone section of content.</li>
+        <li><strong>&lt;article&gt;</strong>: Contains independent, self-contained content.</li>
+        <li><strong>&lt;aside&gt;</strong>: Defines content aside from the main content (like sidebars).</li>
+        <li><strong>&lt;footer&gt;</strong>: Specifies the footer for a document or section.</li>
+    </ul>
+    <p>Using semantic tags makes your HTML easier to read and helps browsers and assistive technologies understand your page structure.</p>
+
+    <header>
+        <h1>Quiz Reviewer Header</h1>
+        <nav>
+            <ul>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#semantic">Semantic Tags</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="headings">
+            <h2>Headings Example</h2>
+            <p>This section demonstrates different heading levels.</p>
+        </section>
+
+        <section id="lists">
+            <h2>Lists Example</h2>
+            <article>
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>First</li>
+                    <li>Second</li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="table">
+            <h2>Table Example</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column A</th>
+                        <th>Column B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="semantic">
+            <h2>Semantic Tags Example</h2>
+            <article>
+                <h3>What is a Semantic Tag?</h3>
+                <p>Semantic tags describe their meaning and structure, improving accessibility and SEO.</p>
+            </article>
+            <aside>
+                <h4>Tip</h4>
+                <p>Use semantic tags whenever possible for better code quality.</p>
+            </aside>
+        </section>
+    </main>
+    <table style="border: 2px solid #333; border-collapse: collapse;">
+        <tr>
+            <th style="border: 1px solid #333; padding: 8px;" colspan="2">Name</th>
+            <th style="border: 1px solid #333; padding: 8px;">Age</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #333; padding: 8px;" rowspan="2">Alice</td>
+            <td style="border: 1px solid #333; padding: 8px;">Smith</td>
+            <td style="border: 1px solid #333; padding: 8px;">20</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #333; padding: 8px;">Johnson</td>
+            <td style="border: 1px solid #333; padding: 8px;">21</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #333; padding: 8px;" colspan="2">Total Students</td>
+            <td style="border: 1px solid #333; padding: 8px;">2</td>
+        </tr>
+    </table>
+    <form action="#" method="post">
+        <fieldset tabindex="0">
+            <legend>Sample Form</legend>
+            <label for="text">Text Input:</label>
+            <input type="text" id="text" name="text"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" min="1" max="100"><br><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range" min="0" max="10"><br><br>
+
+            <label for="file">File Upload:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label>Radio Buttons:</label>
+            <input type="radio" id="option1" name="radio" value="Option 1">
+            <label for="option1">Option 1</label>
+            <input type="radio" id="option2" name="radio" value="Option 2">
+            <label for="option2">Option 2</label><br><br>
+
+            <label>Checkboxes:</label>
+            <input type="checkbox" id="check1" name="check1" value="Check 1">
+            <label for="check1">Check 1</label>
+            <input type="checkbox" id="check2" name="check2" value="Check 2">
+            <label for="check2">Check 2</label><br><br>
+
+            <label for="select">Select:</label>
+            <select id="select" name="select">
+                <option value="">--Choose an option--</option>
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+            </select><br><br>
+
+            <label for="textarea">Textarea:</label><br>
+            <textarea id="textarea" name="textarea" rows="4" cols="30"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <button type="button">Button</button>
+        </fieldset>
+    </form>
+
+    <section>
+        <h2>Topics Covered: &lt;p&gt; and Headings</h2>
+        <article>
+            <h3>&lt;p&gt; Tag (Paragraph)</h3>
+            <ul>
+                <li>Defines a paragraph of text.</li>
+                <li>Used for grouping sentences and blocks of text.</li>
+                <li>Improves readability and structure.</li>
+                <li>Browsers add space before and after each &lt;p&gt; by default.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Heading Tags (&lt;h1&gt; to &lt;h6&gt;)</h3>
+            <ul>
+                <li>Represent six levels of headings, from most important (&lt;h1&gt;) to least (&lt;h6&gt;).</li>
+                <li>Help organize content hierarchically.</li>
+                <li>Improve accessibility and SEO.</li>
+                <li>Should be used in order, without skipping levels for proper document structure.</li>
+                <li>Browsers display headings in decreasing font size from &lt;h1&gt; to &lt;h6&gt;.</li>
+            </ul>
+        </article>
+    </section>
+</body>
+</html>
