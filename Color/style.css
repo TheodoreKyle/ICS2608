@@ -1,0 +1,9 @@
+body {
+    background-color: beige;
+    color: #0000ff;
+    color: rgb(255, 2, 255);
+}
+h2 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
