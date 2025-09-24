@@ -18,6 +18,7 @@ body {
 .top-nav {
     background-color: #5a3114;
     height: 15vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,18 +49,19 @@ body {
     color: #d1a86d;
 }
 .top-nav ul li.logo img {
-    height: 19vh;
+    height: 32vh;
     width: auto;
     display: block;
     margin: 0 auto;
 }
-main {
+main { 
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
     min-height: 100vh;      
     margin-top: -420px;  
+    padding-bottom: 12vh; 
 }
 .logo-frame {
     position: relative;
@@ -122,66 +124,86 @@ main {
     max-height: auto;
     display: block;
 }
-.bottom-nav {
-    background-color: #5a3114;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    z-index: 3; 
-}
-.bottom-nav > ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; 
-    align-items: end;
-    width: 90%; 
-    margin: 0;
-    padding: 0;
-}
-.bottom-nav > ul > li {
-    text-align: center;
-}
-.bottom-nav .circle {
-    background-color: #5a3114; 
-    border-radius: 50% / 40%;
-    width: 23vw; 
-    height: 18vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 1vw;
-    position: relative;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-}
-.bottom-nav .circle img {
-    width: 90%; 
-    height: auto; 
-}
-.center-logo .circle {
-    width: 18vw; 
-    height: 14vw;
-    border-radius: 50% / 35%;
-    margin-top: -5vh;
-    z-index: 2;
-    padding: 3vw;
-}
-.center-logo .circle img {
-    width: 100%;
-    justify-content: center;
-    align-items: center; 
-}
+/* larger + higher footer icons (replace previous footer/bottom-nav block) */
+
 footer {
-    background-color: #5a3114; 
-    padding: 1rem ;          
-    text-align: center;
+  background-color: #5a3114;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  text-align: center;
+  overflow: visible;
+  width: 100%;
+  height: 40vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 8;
 }
+
+.bottom-nav {
+  background: none;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+/* pulled up more and slightly wider gap */
+.bottom-nav > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: end;
+  gap: 3rem;  
+  margin: 0 auto;
+  padding: 0;
+  gap: 3rem;
+  transform: translateY(-10vh);  /* <- moved higher */
+}
+
+/* SIDE icons — increase size */
+.bottom-nav ul li a img {
+  width: 22vw;   /* <- bigger than before */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.25));
+}
+
+/* CENTER icon — make noticeably larger */
+.bottom-nav ul li.center-logo a img {
+  width: 22vw;  /* <- bigger center logo */
+  height: auto;
+  margin-top: -1.5vh;   /* small nudge so base lines up */
+}
+
 footer > p {
-    color: white;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 2px; 
-    margin: 0.5rem 0;
-} 
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-top: -5.5rem;
+  padding-bottom: 1rem;
+}
+
+/* responsive adjustments (keep them balanced on tablets/phones) */
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .logo-main { width: 400px; }
+  .coffee-beans { width: 700px; }
+  .info-card { width: 600px; }
+  .promo-card { width: 650px; }
+}
+
+/* Phone screens */
+@media (max-width: 600px) {
+  .logo-main { width: 280px; }
+  .coffee-beans { width: 320px; }
+  .info-card { width: 300px; }
+  .promo-card { width: 350px; }
+}

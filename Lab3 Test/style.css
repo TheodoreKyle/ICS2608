@@ -1,53 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Lato:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Lato:wght@400;700&display=swap');
 
-body {
-  margin: 0;
-  font-family: "Antonio", sans-serif;
-  background: #f5f5f5;
-}
+    body {
+    margin: 0;
+    font-family: "Antonio", sans-serif;
+    background: #f5f5f5;
+    padding-top: 2rem;
+    }
 
-.top-nav {
+    /* ---------------- Background ---------------- */
+    .bg-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+    }
+
+    /* ---------------- Top Navigation ---------------- */
+    .top-nav {
     background-color: #5a3114;
-    height: 12vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    position: relative;
+    z-index: 3;
+    }
 
-.top-nav ul {
+    .top-nav > ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;                  /* ✅ changed to flex */
+    justify-content: center;        /* center everything */
     align-items: center;
-    justify-content: space-between;
-    width: 20%;
+    gap: 2rem;                      /* spacing */
     margin: 0;
     padding: 0;
-}
+    }
 
-.top-nav ul li {
-    text-align: center;
-}
-
-.top-nav ul li a {
+    .top-nav > ul > li a {
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 2px;
     transition: color 0.3s ease;
-}
+    }
 
-.top-nav ul li a:hover {
+    .top-nav ul li a:hover {
     color: #d1a86d;
-}
+    }
 
-.top-nav ul li.logo {
-    flex: 0;
-}
-
-.top-nav ul li.logo img {
-    height: 13vh;
+    .top-nav ul li.logo img {
+    height: 36vh;
     width: auto;
     display: block;
+    margin: 0 1rem;
+    }
+
+    /* ---------------- Main Content ---------------- */
+    main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50vh;
+    padding-top: 65vh;
+    padding-bottom: 25vh;
+    box-sizing: border-box;
+    }
+
+    .logo-frame {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    }
+
+    .logo-main {
+    width: 40vw;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-bottom: 2rem;
+    }
+
+    .coffee-beans {
+    width: 85vw;
+    height: auto;
+    display: block;
+    margin-top: -4vh;
+    z-index: -1;
+    position: relative; 
+    }
+
+    .info-map {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    }
+
+    .info-card {
+    width: 71.5vw;
+    height: auto;
+    display: block;
+    }
+
+    .map {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    width: 35%;
+    height: 45%;
+    z-index: 2;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+
+    .map iframe {
+    width: 100%;
+    height: 100%;
+    }
+
+    .promotional-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    }
+
+    .promo-card {
+    width: 75vw;
+    max-width: 75vw;
+    height: auto;
+    display: block;
+    }
+
+    /* ---------------- Footer ---------------- */
+    footer {
+    background-color: #5a3114;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 8;
+    }
+
+    .bottom-nav > ul {
+    list-style: none;
+    display: flex;                /* ✅ always in one row */
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
     margin: 0 auto;
-} 
+    padding: 0;
+    flex-wrap: nowrap;           
+    transform: translateY(-14vh);  
+    }
+
+    .bottom-nav ul li a img {
+    width: 33vw;                  /* ✅ made bigger */
+    max-width: 300px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 6px rgba(0,0,0,0.25));
+    }
+
+    .bottom-nav ul li.center-logo a img {
+    width: 26vw;                  /* ✅ center logo bigger */
+    max-width: 300px;
+    }
+
+    footer > p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    }
+
+    /* ---------------- Responsive Tweaks ---------------- */
+    @media (max-width: 768px) {
+    .top-nav > ul {
+        flex-wrap: wrap;            /* ✅ keeps all text visible */
+        gap: 1rem;
+    }
+    .bottom-nav ul li a img {
+        width: 28vw;
+    }
+    .bottom-nav ul li.center-logo a img {
+        width: 32vw;
+    }
+    footer > p {
+        font-size: 1.4rem;
+    }
+    }
