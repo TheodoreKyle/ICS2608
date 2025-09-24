@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Lato:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family: "Antonio", sans-serif;
+    background: #f5f5f5;
+}
 .bg-image {
     width: 100vw;
     height: 100vh;
@@ -7,4 +13,74 @@
     left: 0;
     z-index: -1;
     opacity: 0.6;
-} 
+}
+.top-nav {
+    background-color: #5a3114;
+    height: 15vh;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3; 
+}
+.top-nav > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    width: 28.5%; 
+    margin: 0;
+    padding: 0;
+}
+.top-nav > ul > li {
+    text-align: center;
+}
+.top-nav > ul > li  a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 200;
+    letter-spacing: 2px; 
+    transition: color 0.3s ease;
+}
+.top-nav ul li a:hover {
+    color: #d1a86d;
+}
+.top-nav ul li.logo img {
+    height: 32vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+main { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;      
+    margin-top: -420px;  
+    padding-bottom: 12vh; 
+}
+.logo-frame {
+    position: relative;
+    display: block;
+    margin-top: 50px; 
+    z-index: 1;
+}
+.logo-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw; 
+    height: auto;
+    z-index: 1;
+}
+.coffee-beans {
+    width: 85vw;
+    height: auto;
+    display: block;
+    position: relative;
+    top: 8vh;
+}

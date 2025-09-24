@@ -124,8 +124,6 @@ main {
     max-height: auto;
     display: block;
 }
-/* larger + higher footer icons (replace previous footer/bottom-nav block) */
-
 footer {
   background-color: #5a3114;
   bottom: 0;
@@ -151,8 +149,6 @@ footer {
   margin: 0;
   padding: 0;
 }
-
-/* pulled up more and slightly wider gap */
 .bottom-nav > ul {
   list-style: none;
   display: grid;
@@ -163,25 +159,27 @@ footer {
   margin: 0 auto;
   padding: 0;
   gap: 3rem;
-  transform: translateY(-10vh);  /* <- moved higher */
+  transform: translateY(-10vh);  
 }
-
-/* SIDE icons — increase size */
 .bottom-nav ul li a img {
-  width: 22vw;   /* <- bigger than before */
+  width: 22vw;
   height: auto;
   display: block;
   margin: 0 auto;
   filter: drop-shadow(0 6px 6px rgba(0,0,0,0.25));
 }
-
-/* CENTER icon — make noticeably larger */
 .bottom-nav ul li.center-logo a img {
-  width: 22vw;  /* <- bigger center logo */
+  width: 22vw;  
   height: auto;
-  margin-top: -1.5vh;   /* small nudge so base lines up */
+  margin-top: -1.5vh;
 }
-
+.menu-list {
+    width: 75vw;
+    max-width: 75vw;
+    height: auto;
+    display: block;
+    margin-top: -15rem;
+}
 footer > p {
   color: white;
   font-size: 2.2rem;
@@ -191,7 +189,6 @@ footer > p {
   padding-bottom: 1rem;
 }
 
-/* responsive adjustments (keep them balanced on tablets/phones) */
 /* Tablet screens */
 @media (max-width: 1024px) {
   .logo-main { width: 400px; }
@@ -199,7 +196,6 @@ footer > p {
   .info-card { width: 600px; }
   .promo-card { width: 650px; }
 }
-
 /* Phone screens */
 @media (max-width: 600px) {
   .logo-main { width: 280px; }
