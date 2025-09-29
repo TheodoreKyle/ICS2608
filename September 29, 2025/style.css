@@ -11,7 +11,17 @@
 }
 .box {
     height: 20vh;
+
+@media only screen and (min-width: 600px) {
+    .container {
+        background-color: blue;
+    }
 }
+@media only screen and (min-width: 1024px) {
+    .container {
+        background-color: pink; 
+    }
+    }
 .box:first-child {
     background-color: aqua;
     /* grid-column-start: 1;
@@ -59,3 +69,11 @@ a {
     background-color: lightyellow;
     grid-column: 1/4;
 }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+} 
