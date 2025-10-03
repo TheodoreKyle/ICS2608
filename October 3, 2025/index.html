@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: bisque;
+            display: flex;
+            height: 50vh;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            font-size: 100px;
+        }
+        .container > div:first-child {
+            /* transform: scale(1.4); */
+            /* animation-name: myAnimation; 
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0;
+            animation-iteration-count: infinite; */
+
+            animation: myAnimation 3s ease 0s infinite;
+        }
+        .container div:nth-child(2) {
+            animation: myAnimation 3s ease 0.5s infinite;
+        }
+        .container div:last-child {
+            animation: myAnimation 3s ease 1s infinite;
+        }
+        @keyframes myAnimation {
+            0% {
+                transform: scale(1);
+            }
+            20% {
+                transform: scale(3);
+            }
+            40% {
+                transform: rotate(180deg);
+            }
+            60% {
+                transform: translate(0px, -100px);
+            }
+            80% {
+                transform: translate(0px, -200px);
+            }
+            100% {
+                transform: translate(0, 0); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>🦍</div>
+        <div>🚗</div>
+        <div>😂</div>
+    </div>
+    
+</body>
+</html>
