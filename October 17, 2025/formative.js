@@ -34,5 +34,5 @@ function calculateTotalTasks(tasks) {
 }
 
 // Part 7
-console.log(greetUser(name));
+console.log(greetUser(name)); 
 console.log(calculateTotalTasks(tasks));
