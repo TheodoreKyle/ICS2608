@@ -5,6 +5,7 @@ let tasks = parseInt(prompt("Enter the number of tasks you have completed"), 10)
 console.log("Hello, " + name + "! Welcome to your Task Manager.");
 console.log("You are " + age + " years old.");
 console.log("You have completed " + tasks + " on a daily basis. Great job!");
+// console.log(`Welcome ${name}! Age: ${age} You have ${tasks} tasks completed!`);
 
 // Part 2
 let task_week = tasks * 7; 
