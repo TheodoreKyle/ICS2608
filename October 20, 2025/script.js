@@ -46,3 +46,8 @@ console.log(addition(56, 78)); */
 
 const addition = (num, num2) => num + num2;
 console.log(addition(100, 4341)); 
+
+const SUBJECTS = ["Math", "English", "Science", "Filipino"];
+console.log(SUBJECTS); 
+let newSbj = SUBJECTS.map((subj) => subj + " 4");
+console.log(newSbj);
