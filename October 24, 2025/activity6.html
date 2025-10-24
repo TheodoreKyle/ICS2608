@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 6</title>
+</head>
+<body>
+    <ul id="movieList"></ul>
+    <button onclick="showMovies()"> Show Movies </button> <br><br>
+    <input type="text" id="movieInput" placeholder="Enter a movie">
+    <button onclick="addMovie()">Add Movie </button>
+
+    <script>
+        let movies = ['Inception', 'Spirited Away', 'Princess Mononoke'];
+        function addMovie() {
+                let input = document.getElementById('movieInput');
+                let newMovie = input.value.trim();
+                if (newMovie === '') return;
+                movies.push(newMovie);
+                input.value = '';
+                showMovies();
+            }
+        function showMovies() {
+            let list = document.getElementById('movieList');
+            list.innerHTML = '';
+            for (let i = 0; i < movies.length; i++) {
+                let li = document.createElement('li');
+                li.textContent = movies[i];
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

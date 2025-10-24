@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 7</title>
+</head>
+<body>
+    <div id = "container"></div>
+    <button onclick = "addElement()"> Add </button>
+    <button onclick = "removeElement()"> Remove </button>
+    
+    <script>
+        function addElement() {
+            let p = document.createElement('p');
+            p.innerHTML = 'New paragraph added!';
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            p.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            document.getElementById('container').appendChild(p);
+        }
+        function removeElement() {
+            let box = document.getElementById('container'); 
+            if (box.lastChild) box.removeChild(box.lastChild); 
+        }
+    </script>
+</body>
+</html>

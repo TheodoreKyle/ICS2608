@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 4</title>
+</head>
+<body>
+    <p id="hoverText"> Hover over this text! </p>
+
+    <script>
+        let text = document.getElementById('hoverText');
+        text.addEventListener('mouseover', function () {
+            text.style.color = 'red';
+            text.innerHTML = 'You hovered!';
+        });
+        text.addEventListener('mouseout', function () {
+            text.style.color = 'black';
+            text.innerHTML = 'Hover over this text!';
+        });
+        text.addEventListener('click', function () {
+            text.style.backgroundColor = 'yellow';
+            text.innerHTML = "You clicked me!"
+        }); 
+    </script>
+</body>
+</html>

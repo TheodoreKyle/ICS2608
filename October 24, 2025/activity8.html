@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 8</title>
+</head>
+<body>
+    <input type="text" id="text" placeholder="New task">
+    <button onclick="addTask()"> Add </button>
+    <ul id="taskList"></ul>
+    <script>
+        let tasks = [];
+        function addTask() {
+            let task = document.getElementById('text').value;
+            if (task === '') {
+                alert('Enter a task!');
+                return;
+            }
+            tasks.push(task)
+            renderTasks();
+            document.getElementById('text').value = '';
+        }
+        function renderTasks() {
+            let list = document.getElementById('taskList');
+            list.innerHTML = '';
+            for (let i = 0; i < tasks.length; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = `${tasks[i]} <button onclick="doneTask(${i})">Mark as Done</button> <button onclick="removeTask(${i})">Remove</button>`; 
+                list.appendChild(li);
+            }
+        }
+        function removeTask(index) {
+            tasks.splice(index, 1);
+            renderTasks();
+        }
+        function doneTask(index) {
+            let list = document.getElementById('taskList');
+            let li = list.children[index];
+            li.style.color = 'green';
+            li.style.textDecoration = 'line-through'; 
+        }
+    </script>
+</body>
+</html>

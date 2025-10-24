@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+</head>
+<body>
+    <p id="styleMe"> Watch my color change! </p>
+    <button onclick="changeStyle()"> Change Style </button>
+
+    <script>
+        function changeStyle() {
+            let el = document.getElementById('styleMe');
+            el.style.color = 'purple';
+            el.style.fontWeight = 'bold';
+        }
+
+        function changeStyle() {
+            let el = document.getElementById('styleMe');
+            el.style.backgroundColor = 'yellow';
+            el.style.fontSize = '2rem';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 5</title>
+</head>
+<body>
+    <input type="number" id="age" placeholder="Enter age">
+    <button onclick="checkAge()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script>
+        function checkAge() {
+            let age = document.getElementById('age').value;
+            if (age >= 60) {
+                document.getElementById('result').innerHTML = '🎊 Senior Discount Available!';
+            }
+            else if (age >= 18) {
+                document.getElementById('result').innerHTML = '✅ Eligible!';
+            }
+            else {
+                document.getElementById('result').innerHTML = '❌ Not eligible.';
+            }
+        }
+    </script>
+</body>
+</html>
