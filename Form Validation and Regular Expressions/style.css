@@ -13,7 +13,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 450px;
+    font-size: 24px;
 }
 
 h2 {
@@ -28,6 +29,17 @@ label {
     color: #555;
 }
 
+label, input[type="radio"] {
+    font-family: Arial, sans-serif;
+    font-size: 21px;               
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;               
+}
+
 input[type = "text"], input[type = "email"],
 textarea {
     width: 100%;
@@ -36,6 +48,31 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 16px;
+}
+
+.success {
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+}
+
+.error {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+}
+
+.accepted {
+    border: 1px solid green !important;
+}
+
+.rejected {
+    border: 1px solid red !important;
+}
+
+input:focus {
+    outline: none;
 }
 
 textarea {

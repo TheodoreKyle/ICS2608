@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class = "form-container">
-        <h2>Contact Form</h2>
+        <h2>Personal Contact Form</h2>
         <form>
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="firstName" placeholder="Your first name">
@@ -22,8 +22,20 @@
             <label for="lastName">Last Name</label>
             <input type="text" name="lastName" id="lastName" placeholder="Your last name ">
 
-            <label for="contact">Contact 09991234567</label>
+            <label for="gender">Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" id="male">&nbsp; Male</label>
+                <label><input type="radio" name="gender" id="female">&nbsp; Female</label>
+                <label><input type="radio" name="gender" id="others">&nbsp; Others</label>
+                <label><input type="radio" name="gender" id="none">&nbsp; Prefer not to disclose</label>
+            </div>
+            <br>
+
+            <label for="contact">Contact Number</label>
             <input type="text" name="contact" id="contact" placeholder="09*********">
+
+            <label for="address">Home Address</label>
+            <input type="text" name="address" id="address" placeholder="Your home address"> 
 
             <label for="bio">Bio</label>
             <textarea name="bio" id="bio" placeholder="Write a short bio about yourself"></textarea>
