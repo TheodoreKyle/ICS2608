@@ -7,7 +7,7 @@ let bio = document.getElementById("bio");
 const form = document.querySelector("form");
 
 // Regular Expression
-const namePattern = /^[A-Z][a-z]{1,20}( [A-Z][a-z]{1,35})?$/ 
+const namePattern = /^[A-Z][a-z]{1,20}( [A-Z][a-z]{0,35})?$/ 
 const lastnamePattern = /^[A-Z][a-z]{1,20}$/;
 let contactPattern = /^09[0-9]{9}$/;
 let addressPattern = /^\d+\s[A-Za-z0-9\s\.]+(?:,?\s?(?:Apt|Unit|#)?\s?\d*)?$/; 
@@ -50,8 +50,6 @@ form.addEventListener("submit", (event) => {
         message.setAttribute("class", "error");
         message.innerHTML = "Please Check Your Input"
     }
-
-    
 }); 
 
 // For Validation
@@ -76,18 +74,19 @@ lastName.addEventListener("keyup", (event) => {
 }); 
 
 function validateGender() {
-    const isSelected = Array.from(genderRadios).some(radio => radio.checked);
-
+    let selected = false;
     genderRadios.forEach(radio => {
-        if (isSelected) {
-            radio.parentElement.classList.add("accepted");
-            radio.parentElement.classList.remove("rejected");
+        const label = radio.parentElement;
+        if (radio.checked) {
+            label.classList.add("accepted");
+            label.classList.remove("rejected");
+            selected = true;
         } else {
-            radio.parentElement.classList.add("rejected");
-            radio.parentElement.classList.remove("accepted");
+            label.classList.remove("accepted");
+            label.classList.remove("rejected");
         }
     });
-    return isSelected;
+    return selected;
 }
 
 contact.addEventListener("keyup", (event) => {
@@ -99,7 +98,6 @@ contact.addEventListener("keyup", (event) => {
     }
     console.log(event.target.value);
 }); 
-
 
 address.addEventListener("keyup", (event) => {
     let address = addressPattern.test(event.target.value);
