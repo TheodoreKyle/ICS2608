@@ -107,6 +107,10 @@ let employees = [
 ]
 console.log(employees[1]);
 console.log(employees[1].name);
-for (let i = 0; i < employees.length; i++) {
-    console.log(employees[i].name);
+// for (let i = 0; i < employees.length; i++) {
+//     console.log(employees[i].name);
+// }
+// employees.forEach((employee) => console.log(employee.name));
+for (employee of employees) {
+    console.log(employee.name);
 }
