@@ -98,3 +98,15 @@ function addNum(num, ...numetc) {
     console.log(...numetc);
 }
 addNum(1,2,3,4,5,6,7,8);
+
+let employees = [
+    {name: "Theodore Choa", age: 21},
+    {name: "Theodore Cho", age: 2},
+    {name: "Theodore Ch", age: 212},
+    {name: "Theodore C", age: 2123},
+]
+console.log(employees[1]);
+console.log(employees[1].name);
+for (let i = 0; i < employees.length; i++) {
+    console.log(employees[i].name);
+}
